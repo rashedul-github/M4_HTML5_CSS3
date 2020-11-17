@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>RoomBooking</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(document).ready(() => {
+            $.ajax({
+                type: 'GET',
+                url: '/list',
+                dataType: 'json'
+            }).done((r) => {
+                $.each(r, (i, v) => {
+                    $("#placeholder").append(`<tr>
+                            <td><img class='profile-pic' src='${v.picture}' width='60px' /></td>
+                            <td>${v.name}</td>
+                            <td>${v.address}</td>
+                            <td>${v.number}</td>
+                            <td>${v.roomId}</td>
+                            <td>${formatDate(v.date)}</td>
+                            <td>${v.price}</td>
+							<td>
+							  <a href="/edit/${v.id}" class="btn btn-primary">Edit</a>
+							  <a href="" class="btn btn-warning">Delete</a>
+							</td>
+                        </tr>`)
+                });
+            });
+        });
+
+        function formatDate(dt) {
+            var x = new Date(dt);
+            var m = x.getMonth() + 1;
+            var d = x.getDate();
+            return `${x.getFullYear()}-${m < 10 ? '0' + m: m}-${d < 10 ? '0' + d : d}`;
+        }
+    </script>
+</head>
+<body>
+	<div>
+		<nav class="brand">
+        <ul>
+            <li><a href="index.html">Home</a></li>                   
+        </ul>
+		</nav> 
+	</div>
+	<div class="container">
+					<br/><br/><br/><br/>
+                    
+                    <div style="display:flex; justify-content:flex-end">
+                        <a href="create.html" class="btn">New Booking</a>
+                    </div>
+                    <table class="table bordered" cellspacing="0">
+					<caption>Already Booked People</caption>
+                        <thead>
+                            <tr>
+                                <th>Picture</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Number</th>
+                                <th>Room Id</th>
+                                <th>Date</th>
+                                <th>Price</th>
+								<th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="placeholder"></tbody>
+                    </table>
+            <div class="footer">
+                <hr />
+                <i>&copycopyright 2020</i>
+            </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color:#3b2f44;
+    color: white;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+	   
+}
+.brand {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+nav ul{
+    list-style: none;
+    margin-right: auto;
+}
+nav ul li{
+    display: inline-block;
+    text-align: center;
+}
+
+nav ul li a{
+    padding: 20px 20px;
+    width: 100px;
+    /* display: inline-block; */
+    text-decoration: none;
+    color: #fff;
+    /*text-transform: uppercase;*/
+    font-weight: 600;
+}
+
+.container{
+    width: 98%;
+}
+	  
+    .footer{
+		width:85%;
+		margin: auto auto;
+        padding: 30px 15px 20px 15px;
+    }
+
+    /*Table*/
+.table {
+    width: 85%;
+	margin: auto auto;
+	background-color:#eee9e5;
+    
+}
+    .table thead th {
+        border-bottom: solid 1px #beebe9;
+        padding: 10px;
+        text-align:left;
+        font-weight:600;
+    }
+    .table tbody td {
+        border-bottom: solid 1px #beebe9;
+        padding: 7px;
+    }
+
+.btn {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+}
+.btn-default {
+    color: rgba(0, 0, 0, .7);
+}
+.btn-circle {
+    border-radius: 4px;
+    color: rgba(0, 0, 0, .7);
+   
+}
+.btn-sm{
+    padding: 7px 10px;
+}
+.btn-primary {
+    background-color: #5c007a;
+    color: white;
+}
+.btn-warning{
+    background-color: #ff9800;
+    color: red;
+}
+
+.btn-warning:hover{
+	background:#e68a00;
+}
+caption{
+	color:green;
+	text-align:left;
+	font-weight:600;
+	font-size:26px;
+	padding:20px;
+}
+
+.profile-pic{
+	border-radius:12px;
+}

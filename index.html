@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="./styles/mystyle.css">
+    <title>Hotel Sea Crown</title>
+    
+</head>
+<body>
+    <nav class="brand">
+        <ul>
+            <li><a href="#sec1">Home</a></li>
+            <li><a href="#sec2">Room</a></li>
+			<li><a href="roombook.html">Booking</a></li>
+			<li ><a href="#sec3">About</a></li>                      
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="sec1">
+            <br/><div id='icon'><img src="./Images/Logo.png" > </div>
+            <div class="mc">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><img src="./Images/424x600.png" width="300px" height="445px"></th>
+                            <th><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></th>
+                            <th ><img src="./Images/h1.jpg" width='600px' height="160px" alt="Mustache"  /><br/>
+                                <img src="./Images/h2.jpg" width='600px' height="160px" alt="Mustache"  /><br/>
+                                <img src="./Images/h3.jpg" width='600px' height="160px" alt="Mustache"  />
+                            </th>
+                           
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div id="sec2">
+            <h2>Room</h2>
+            <div class="mc">
+                <table>
+                    <thead>
+                        
+                        <tr>
+                            <th><img src="./Images/r4.jpg" width="300px" height="150px" ></th>
+                            <th><img src="./Images/r5.jpg" width="300px" height="150px" ></th>
+                            <th><img src="./Images/r6.jpg" width="300px" height="150px" ></th>                    
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                                    <td>Room ID: 011<br/> Bed: Double<br/> Price tk:3500</td>
+                                    <td>Room ID: 012<br/> Bed: Single<br/> Price tk:2500</td>
+                                    <td>Room ID: 013<br/> Bed: Double<br/> Price tk:3500</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/r1.jpg" width="300px" height="150px" ></td>
+                            <td><img src="./Images/r2.jpg" width="300px" height="150px" ></td>
+                            <td><img src="./Images/r3.jpg" width="300px" height="150px" ></td>                    
+                         </tr>
+                         <tr>
+                            <td>Room ID: 014<br/> Bed: Single<br/> Price tk:1500</td>
+                            <td>Room ID: 015<br/> Bed: Double<br/> Price tk:4500</td>
+                            <td>Room ID: 016<br/> Bed: Single<br/> Price tk:2500</td>
+                </tr>
+                    </tbody>
+                </table>
+            </div>
+           <div class="mc">
+               <hr/>
+               For Room Booking click&nbsp;
+            <a href="create.html" class="btn btn-primary">Here</a>
+           </div>
+        </div>
+        <div id="sec3">
+            <h2>About</h2>
+            <div class="footer-wrapper">
+                 <div class="box">
+					 <h2>Hotel Sea Crown</h2>
+                    <p>Hotel Sea Crown started its business from late 2004. Hotel Sea 
+                        Crown is a Three Star Deluxe Hotel spectacularly designed and added with 
+                        traditional hospitality of courteous, attractive and personalized service and is conveniently 
+                        located right on the Beach at a distance of 100 (one hundred) meter from Kolatoli turning point and 3 (three)
+                         kilometers from Airport in Cox′s Bazar., Where one can enjoy the Sea, the Sunset and the waves 
+                         of the Sea lying on the bed of our Hotel.</p>
+				</div>
+				<div class="box">
+					<h2>Contact Us</h2>
+                    <ul>
+                        <li><a href="#">Marine Drive, Kola Toli New Beach</a></li>
+                        <li><a href="#">Cox’s Bazar, Bangladesh</a></li>
+                        <li><a href="#">Telephone: 0341-64795, 0341-64474</a></li>
+                        <li><a href="#">Mobile: +88 01817-08 94 20</a></li>
+                        <li><a href="#">E-mail: reservation@hotelseacrownbd.com</a></li>
+                    </ul>
+				</div>
+				<div class="box">
+					<h2>Services</h2>
+                    <ul>
+                        <li><a href="#">Complimentary Buffet Breakfast</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Bar-B-Q</a></li>
+                        <li><a href="#">Billiard Game</a></li>
+                        <li><a href="#">Free WiFi</a></li>
+                        <li><a href="#">24 Hours Room Service</a></li>
+                    </ul>
+				</div>
+                
+            </div>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

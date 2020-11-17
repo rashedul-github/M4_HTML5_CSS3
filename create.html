@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Create</title>
+    <link href="styles/mystyle.css" rel="stylesheet" />
+    <link href="styles/form.css" rel="stylesheet" />
+    <link href="styles/flatpickr.css" rel="stylesheet" />
+    <script src="styles/jquery.js"></script>
+    <script src="styles/flatpickr.js"></script>
+    <script>
+        $(document).ready(() => {
+		$('#joindate').flatpickr();
+        
+        $("#name").change(() => {
+          if ($("#name").val() == "") {
+            $("#n_err").show();
+          } else {
+            $("#n_err").hide();
+          }
+        });
+		$("#address").change(() => {
+          if ($("#address").val() == "") {
+            $("#n_ad").show();
+          } else {
+            $("#n_ad").hide();
+          }
+        });
+		$("#number").change(() => {
+          if ($("#number").val() == "") {
+            $("#n_nm").show();
+          } else {
+            $("#n_nm").hide();
+          }
+        });
+		$("#room").change(() => {
+          if ($("#room").val() == "") {
+            $("#n_ri").show();
+          } else {
+            $("#n_ri").hide();
+          }
+        });
+		$("#joindate").change(() => {
+          if ($("#joindate").val() == "") {
+            $("#n_dt").show();
+          } else {
+            $("#n_dt").hide();
+          }
+        });
+		$("#price").change(() => {
+          if ($("#price").val() == "") {
+            $("#n_pr").show();
+          } else {
+            $("#n_pr").hide();
+          }
+        });
+		$("#picture").change(() => {
+          if ($("#picture").val() == "") {
+            $("#n_pt").show();
+          } else {
+            $("#n_pt").hide();
+          }
+        });
+        
+        
+        $("#save").click(() => {
+          var isValid = true;
+          if ($("#name").val() == "") {
+            $("#n_err").show();
+            isValid = false;
+          }
+		  if ($("#address").val() == "") {
+            $("#n_ad").show();
+            isValid = false;
+          }
+		   if ($("#number").val() == "") {
+            $("#n_nm").show();
+            isValid = false;
+          }
+		  if ($("#room").val() == "") {
+            $("#n_ri").show();
+            isValid = false;
+          }
+		  if ($("#joindate").val() == "") {
+            $("#n_dt").show();
+            isValid = false;
+          }
+		  if ($("#price").val() == "") {
+            $("#n_pr").show();
+            isValid = false;
+          }
+		  if ($("#picture").val() == "") {
+            $("#n_pt").show();
+            isValid = false;
+          }
+         
+          return isValid;
+        });
+      });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">       
+		<nav class="brand">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="roombook.html">Booking</a></li>			
+        </ul>
+		</nav>
+        <div class="container">
+            
+            <br/><br/>
+            <div class="content">
+			<br/><br/>
+
+                <div class="content-wrap">
+                    
+                    <div class="fv">
+						<form action="/create" method="post" id="frm" enctype="multipart/form-data">
+                        <div class="field">
+                            <h1>New Booking</h1>
+                        </div>
+                        <div class="field">
+                            <label for="name" class="label">Name</label>
+                            <input type="text" class="control" name="name" id="name" />                          
+                        </div>
+						 <div class="field error" id="n_err">**Name is required.</div>
+                        
+                        <div class="field">
+                            <label for="address" class="label">Address</label>
+                            <textarea class="control" name="address" id="address" rows="2"></textarea>
+                        </div>
+						<div class="field error" id="n_ad">**Address is required.</div>
+                       
+                        <div class="field">
+                            <label for="number" class="label">Number</label>
+                            <input type="number" class="control" name="number" id="number" />
+                        </div>
+						<div class="field error" id="n_nm">**Number is required.</div>
+                      
+                        <div class="field">
+                            <label for="room" class="label">Room ID</label>
+                            <input type="number" class="control" name="room" id="room" />
+                        </div>
+						<div class="field error" id="n_ri">**Room ID is required.</div>
+                      
+                        <div class="field">
+                            <label class="label" for="joindate">Date</label>
+                            <input class="control" type="date" name="joindate" id="joindate" />
+                        </div>
+						<div class="field error" id="n_dt">**Date is required.</div>
+                      
+                        <div class="field">
+                            <label class="label" for="price">Price</label>
+                            <input class="control" type="text" name="price" id="price" />
+                        </div>
+						<div class="field error" id="n_pr">**Pirce is required.</div>
+                     
+                        <div class="field">
+                            <label class="label" for="picture">Picture</label>
+                            <input class="control" type="file" name="picture" id="picture" />
+                        </div>
+						<div class="field error" id="n_pt">**Picture is required.</div>
+                  
+                        <div class="field">
+                            <input type="reset" class="btn btn-warning" value="Reset" />
+                            &nbsp;
+                            <button type="submit" id="save" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div class="field">
+                            <a href="roombook.html" class="btn">&#8592; Back to list</a>
+                        </div>
+						</form>
+					</div>
+                </div>
+            </div>
+            <footer>
+                <hr />
+                <i>&copycopyright 2020</i>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
